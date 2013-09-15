@@ -350,16 +350,6 @@ $(function(){
             count = 0;
             gameBegin(i);
         });
-        $(this).mousedown(function(){
-            $(this).css({
-                "background-image":"url('images/boton-nivel-pressed.png')"
-            })
-        });
-        $(this).mouseout(function(){
-            $(this).css({
-                "background-image":"url('images/boton-nivel.png')"
-            })
-        });
     });
 
 
