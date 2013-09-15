@@ -2,12 +2,12 @@
 a{text-decoration: none;}
 li{list-style: none;}
 
-#container{width:1024px;height:768px;margin: 0 0 0 -512px;top:0;left:50%;overflow: hidden;position: absolute;}
+#container{width:950px;height:760px;margin: 0 0 0 -475px;top:0;left:50%;overflow: hidden;position: absolute;}
 body{font: bold 20px "helvetica neue", helvetica, arial, sans-serif;color:#fae325;text-shadow: 2px 2px 3px rgba(0,0,0,0.7);}
 #go{position:absolute;top:40%;left:50%;margin:0 0 0 -100px;}
 #main{overflow: auto!important;}
 
-#levels{width:900px;position:absolute;top:150px;left:100px;display: none;z-index: 10;}
+#levels{width:900px;position:absolute;top:150px;left:50px;display: none;z-index: 10;}
 #levels li{float:left;text-align: center;}
 #levels a{ display: block;text-align: center;width: 216px; height: 216px; line-height: 200px;background: url("images/boton-nivel.png");background-size: 100% 100%;color: #E79732;text-shadow: 0 6px 8px #5D5D5D;font-size: 144px;font-family: Helvetica,Arial,Sans-Serif;font-weight: normal;}
 #levels span{  font: bold 20px "helvetica neue", helvetica, arial, sans-serif;line-height: 30px;color:#fff;display: none;}

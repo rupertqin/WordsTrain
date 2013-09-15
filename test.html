@@ -14,8 +14,14 @@ WB2.login(function(){
 console.log("logined");
 $("body").hide();
 });
-$.getJSON("https://api.weibo.com/2/statuses/queryid.json", "mid=yybyOssa9&type=1&isBase62=1&access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",function(){
-    console.log("success");
+
+$.ajax({
+  url: "https://api.weibo.com/2/statuses/user_timeline.json?access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",
+  context: document.body,
+  dataType: "jsonp",
+  type: "GET"
+}).done(function(data) {
+  console.log(data);
 });
 
 
