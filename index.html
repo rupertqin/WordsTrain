@@ -13,6 +13,10 @@
   <script src="js/const-zh.js"></script>
   <script src="js/common.js"></script>
   <script>
+  App.AuthDialog.show({
+    "client_id" : "3465187335"   // appkey
+    "redirect_uri" : "http://apps.weibo.com/huocheenglish" // 授权成功后回调URL
+  });
   WB2.login(function(){
   console.log("logined");
   });
@@ -183,7 +187,7 @@
     </div>
 
     <footer>
-      Rupert版权所有 联系我们：021-28593310
+      声明：火车英语单词应用为Rupert提供 联系我：021-28593310 或者联系客服QQ13020520 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=13020520&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:13020520:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
     </footer>
 
   </body>
