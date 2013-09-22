@@ -473,21 +473,26 @@ $("#clouds img").each(function(i){
             top:68
         },1000,"easeOutBounce");
 
-        $(".play").animate({
-                top:768
-            },2000).animate({
+        $(".play")
+        .animate({
+            top:768
+        },2000)
+        .animate({
             top:292
-        },1000,"easeOutBounce").click(function(){
-                      $(".trainman,.logo,.ground").fadeOut();
-                      $(this).fadeOut();
-                $("#game").fadeIn();
-                    }).mousedown(function(){
-                                    $(this).css("background-image","url(images/play-pressed.png)")
-                                }).mouseleave(function(){
-                                                $(this).css("background-image","url(images/play.png)")
-                                            }).click(function(){
-                sound_play.play();
-            });
+        },1000,"easeOutBounce")
+        .click(function(){
+            $(".trainman,.logo,.ground").fadeOut();
+            $(this).fadeOut();
+            $("#game").fadeIn();
+            $('#levels a:first').click();
+            sound_play.play();
+        })
+        .mousedown(function(){
+            $(this).css("background-image","url(images/play-pressed.png)")
+        })
+        .mouseleave(function(){
+            $(this).css("background-image","url(images/play.png)")
+        });
 
         $("#scene .trainman").animate({
             right:0

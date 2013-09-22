@@ -13,15 +13,16 @@
   <script src="js/const-zh.js"></script>
   <script src="js/common.js"></script>
   <script>
-  App.AuthDialog.show({
-    "client_id" : "3465187335",
-    "redirect_uri" : "http://apps.weibo.com/huocheenglish"
-  });
-
-  $.getJSON("https://api.weibo.com/2/statuses/queryid.json", "mid=yybyOssa9&type=1&isBase62=1&access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",function(){
-      console.log("success");
-  });
-
+  var isSina = location.href === "http://121.199.42.244/qq-words-train/";
+  if( location.href.indexOf("http://121.199.42.244/WordsTrain/") !== -1 ){
+    App.AuthDialog.show({
+      "client_id" : "3465187335",
+      "redirect_uri" : "http://apps.weibo.com/huocheenglish"
+    });
+    $.getJSON("https://api.weibo.com/2/statuses/queryid.json", "mid=yybyOssa9&type=1&isBase62=1&access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",function(){
+        console.log("success");
+    });
+  }
   </script>
   <title>Train</title>
   </head>
@@ -137,27 +138,31 @@
             <div class="dialog">
                 <p></p>
                 <img src="images/example-lv1.jpg">
-            </div>
                 <a href="#" class="btn_next"></a>
+            </div>
+                
             </div>
             <div class="window level_4">
             <div class="dialog">
                 <p></p>
                 <img src="images/example-lv4.png">
-            </div>
                 <a href="#" class="btn_next"></a>
+            </div>
+                
             </div>
             <div class="window level_7">
             <div class="dialog">
                 <p> </p>
-            </div>
                 <a href="#" class="btn_next"></a>
+            </div>
+                
             </div>
             <div class="window finished">
             <div class="dialog">
                 <p> .</p>
-            </div>
                 <a href="#" class="btn_next"></a>
+            </div>
+                
             </div>
         </div>
         <div id="config_buttons">
@@ -185,7 +190,7 @@
     </div>
 
     <footer>
-      声明：火车英语单词应用为Rupert提供 联系我：021-28593310 或者联系客服QQ13020520 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=13020520&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:13020520:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+      声明：火车英语单词应用为“覃湘”提供 联系我：021-28593310 或者联系客服QQ13020520 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=13020520&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:13020520:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
     </footer>
 
   </body>
