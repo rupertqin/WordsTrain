@@ -6,6 +6,7 @@
   <link type="text/css" href="jqueryui/css/vader/jquery-ui-1.8.21.custom.css" rel="stylesheet">
   <script src="js/jquery.js"></script>
   <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" type="text/javascript" charset="utf-8"></script>
+  <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3465187335" type="text/javascript" charset="utf-8"></script>
   <script src="js/jqueryui.js"></script>
   <script src="js/easing.js"></script>
   <script src="js/jquery.ui.touch.js"></script>
@@ -13,15 +14,19 @@
   <script src="js/const-zh.js"></script>
   <script src="js/common.js"></script>
   <script>
-  if( location.href.indexOf("http://121.199.42.244/WordsTrain/") !== -1 ){
+  if( location.href.indexOf("http://121.199.42.244/WordsTrain/") !== -1 || location.href.indexOf("http://coigres/github/WordsTrain/") !== -1){
     App.AuthDialog.show({
       "client_id" : "3465187335",
       "redirect_uri" : "http://apps.weibo.com/huocheenglish"
     });
-    $(function(){
-      $('#container').add('footer').remove();
-      $('html').attr('id', 'login');
-    })
+    console.log( 'is login :' + WB2.checkLogin() )
+    if( !WB2.checkLogin() ){
+      $(function(){
+        $('#container').add('footer').remove();
+        $('html').attr('id', 'login');
+      })
+    }
+    
     
     $.getJSON("https://api.weibo.com/2/statuses/queryid.json", "mid=yybyOssa9&type=1&isBase62=1&access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",function(){
         console.log("success");
