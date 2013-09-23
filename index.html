@@ -13,12 +13,16 @@
   <script src="js/const-zh.js"></script>
   <script src="js/common.js"></script>
   <script>
-  var isSina = location.href === "http://121.199.42.244/qq-words-train/";
-  if( location.href.indexOf("http://121.199.42.244/WordsTrain/") !== -1 ){
+  if( location.href.indexOf("http://121.199.42.244/WordsTrain/") === -1 ){
     App.AuthDialog.show({
       "client_id" : "3465187335",
       "redirect_uri" : "http://apps.weibo.com/huocheenglish"
     });
+    $(function(){
+      $('#container').add('footer').remove();
+      $('html').attr('id', 'login');
+    })
+    
     $.getJSON("https://api.weibo.com/2/statuses/queryid.json", "mid=yybyOssa9&type=1&isBase62=1&access_token=2.0011hxhB_WZVmD4535488c2biR2M9E",function(){
         console.log("success");
     });
