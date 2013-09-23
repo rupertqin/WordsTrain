@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="js/jquery.js"></script>
+    <script src="js/underscore.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://fusion.qq.com/fusion_loader?appid=801187806&platform=qzone"></script>
+    <script>
+    	$(function(){
+    		$.ajax({
+    			url: 	'http://119.147.19.43/v3/user/get_info?',
+    			type: 'POST'
+    		})
+    		.done(function(){
+    			console.log('done')
+    		})
+    	})
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
